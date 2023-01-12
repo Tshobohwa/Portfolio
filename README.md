@@ -55,7 +55,7 @@ My portfolio
 
 > Describe between 1-3 key features of the application.
 
-- **[Portfolio website]** describes my abilities in software development.
+- **[Portfolio website]** describe my projects in sofware development.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
