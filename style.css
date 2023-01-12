@@ -1,0 +1,75 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: inherit;
+	text-decoration: none;
+}
+
+body {
+	box-sizing: border-box;
+	font-family: "Poppins", sans-serif;
+	background-color: #ffff;
+	width: 100vw;
+}
+
+.blue-text {
+	color: #6070ff;
+}
+
+#page-header {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	padding: 5%;
+}
+
+#my-logo {
+	font-weight: 700;
+	font-size: 18px;
+}
+
+#section-1 {
+	background-image: url("images/header-background.png");
+	background-size: contain;
+	background-repeat: no-repeat;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	height: 100vh;
+	width: 100%;
+	padding: 5%;
+}
+
+#main-head {
+	width: 80%;
+	font-size: 2.5rem;
+	line-height: 3.25rem;
+	font-weight: 700;
+	color: #172B4d;
+	display: flex;
+	align-items: center;
+	margin-bottom: 5%;
+}
+
+#section-1-description,
+#connect-link {
+	font-size: 1rem;
+	line-height: 1.5rem;
+	margin-bottom: 5%;
+}
+
+#section-1-description {
+	font-weight: 400;
+	color: #344563;
+}
+
+#contact-list {
+	list-style-type: none;
+	width: 100%;
+	display: flex;
+}
+
+.contact-list-icon {
+	height: 1.25rem;
+	margin-right: 1.5rem;
+}
