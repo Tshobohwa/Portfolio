@@ -34,7 +34,7 @@ ul {
   font-size: 18px;
 }
 
-.portfolio-section{
+.portfolio-section {
   padding: 5%;
   margin-bottom: 10vh;
   width: 100%;
@@ -48,7 +48,7 @@ ul {
   gap: 1rem;
 }
 
-#section-1{
+#section-1 {
   border-bottom-left-radius: 7rem;
   background-image: url("images/header-background.png");
   background-size: contain;
@@ -56,7 +56,7 @@ ul {
   height: 100vh;
 }
 
-.title{
+.title {
   font-weight: 700;
   color: #172b4d;
   width: 75%;
@@ -92,31 +92,31 @@ ul {
   margin-right: 1.5rem;
 }
 
-#section-2{
+#section-2 {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 10vh;
 }
 
-.work{
+.work {
   display: flex;
   flex-direction: column;
   padding: 1rem;
   gap: 1.25rem;
-  border: 1px solid #DFE1E6;
+  border: 1px solid #dfe1e6;
   background-color: #ffff;
   border-radius: 1rem;
   color: #344563;
 }
 
-.work-image-container{
+.work-image-container {
   border-radius: 0.5rem;
   width: 295px;
   height: 220px;
   align-self: center;
 }
 
-.work-image-1{
+.work-image-1 {
   background-image: url("images/Snapshoot-Portfolio-1.jpg");
 }
 
@@ -132,33 +132,33 @@ ul {
   background-image: url("images/Snapshoot-Portfolio-4.jpg");
 }
 
-.work-name{
+.work-name {
   font-size: 2rem;
   line-height: 2.75rem;
 }
 
-.small-description{
+.small-description {
   font-size: 13px;
   line-height: 1rem;
   font-weight: 600;
 }
 
-.small-description-highlight{
+.small-description-highlight {
   color: #7a869a;
 }
 
-.counter{
+.counter {
   height: 0.5rem;
   width: 0.5rem;
   margin: 0 0.5rem;
 }
 
-.work-used-tools{
+.work-used-tools {
   display: flex;
   gap: 1rem;
 }
 
-.tool{
+.tool {
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -169,7 +169,7 @@ ul {
   color: #6070ff;
 }
 
-.portfolio-btn{
+.portfolio-btn {
   height: 3rem;
   width: max-content;
   border-radius: 0.5rem;
@@ -182,25 +182,25 @@ ul {
   padding-right: 1rem;
 }
 
-#section-3{
+#section-3 {
   border-top-right-radius: 7rem;
   padding-top: 5rem;
 }
 
-.domain-name{
+.domain-name {
   display: flex;
   align-items: center;
   height: 4rem;
   font-size: 1.25rem;
 }
 
-.languages-list{
+.languages-list {
   display: grid;
   grid-template-columns: 1fr;
   row-gap: 1rem;
 }
 
-.language{
+.language {
   display: flex;
   gap: 2rem;
   align-items: center;
@@ -210,24 +210,24 @@ ul {
   padding-left: 1rem;
 }
 
-.language-name{
+.language-name {
   color: #253858;
   font-weight: 500;
 }
 
-.unactive-skill{
+.unactive-skill {
   border-bottom: solid 2px #dfe1e6;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.skill-title{
+.skill-title {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.more-icon{
+.more-icon {
   margin-right: 2rem;
 }
