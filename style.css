@@ -34,6 +34,10 @@ ul {
   font-size: 18px;
 }
 
+#header-ul {
+  display: none;
+}
+
 .portfolio-section {
   padding: 5%;
   margin-bottom: 10vh;
@@ -44,7 +48,6 @@ ul {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #ffff;
   gap: 1rem;
 }
 
@@ -53,16 +56,16 @@ ul {
   background-image: url("images/header-background.png");
   background-size: contain;
   background-repeat: no-repeat;
-  height: 100vh;
+  height: 45rem;
+  background-color: #ffff;
 }
 
 .title {
   font-weight: 700;
   color: #172b4d;
-  width: 75%;
 }
 
-#main-head {
+.main-head {
   width: 80%;
   font-size: 2.5rem;
   line-height: 3.25rem;
@@ -73,7 +76,7 @@ ul {
 .description,
 .connect-link,
 .work-summary {
-  font-size: 15px;
+  font-size: 1rem;
   line-height: 1.5rem;
 }
 
@@ -109,11 +112,19 @@ ul {
   color: #344563;
 }
 
+.work-description {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
 .work-image-container {
   border-radius: 0.5rem;
   width: 295px;
   height: 220px;
   align-self: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
 .work-image-1 {
@@ -138,7 +149,7 @@ ul {
 }
 
 .small-description {
-  font-size: 13px;
+  font-size: 0.8rem;
   line-height: 1rem;
   font-weight: 600;
 }
@@ -195,6 +206,8 @@ ul {
 #section-3 {
   border-top-right-radius: 7rem;
   padding-top: 5rem;
+  background-color: #ffff;
+  padding-bottom: 7rem;
 }
 
 .domain-name {
@@ -240,4 +253,178 @@ ul {
 
 .more-icon {
   margin-right: 2rem;
+}
+
+.portfolio-footer {
+  margin-top: -10rem;
+  border-top-left-radius: 7rem;
+  background-color: #6070ff;
+  color: #ffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 45rem;
+  background-image: url('images/contact-form-background.png');
+  background-size: contain;
+  background-position: right;
+  background-repeat: no-repeat;
+}
+
+.footer-form {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 80%;
+  align-items: center;
+}
+
+.footer-description {
+  text-align: center;
+  color: #ebebff;
+  line-height: 1.4rem;
+}
+
+.form-input {
+  height: 2.5rem;
+  width: 100%;
+  padding-left: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form-textarea {
+  width: 100%;
+  height: 10rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  border-radius: 0.5rem;
+  border: none;
+}
+
+.form-button {
+  background-color: white;
+  color: #6070ff;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 0.2rem;
+  align-self: flex-start;
+}
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+
+  #page-header {
+    height: 3.5rem;
+    background-color: #ffff;
+    align-items: center;
+    padding: 0 5rem;
+    box-shadow: 0 0 1rem #a7aeff;
+  }
+
+  .header-li a {
+    color: #344563;
+    font-weight: 400;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  #header-ul {
+    display: flex;
+  }
+
+  .header-li {
+    margin: 0 1rem;
+  }
+
+  #section-1 {
+    background-image: url('images/header-background-desktop.png');
+    background-size: auto;
+    padding: 5rem 25rem;
+  }
+
+  .work {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 7rem 10% 0 10%;
+  }
+
+  .work:hover {
+    border: 2px solid #a7aeff;
+    box-shadow: 0 0 16px #a7aeff;
+  }
+
+  .work-image-container {
+    width: 100%;
+    height: 370px;
+  }
+
+  .work-image-1 {
+    background-image: url("images/Snapshoot-Portfolio-1-desktop.png");
+  }
+
+  .work-image-2 {
+    background-image: url("images/Snapshoot-Portfolio-2-desktop.png");
+  }
+
+  .work-image-3 {
+    background-image: url("images/Snapshoot-Portfolio-3-desktop.png");
+  }
+
+  .work-image-4 {
+    background-image: url("images/Snapshoot-Portfolio-4-desktop.png");
+  }
+
+  #work-2 .work-description,
+  #work-4 .work-description {
+    order: 1;
+  }
+
+  #work-2 .work-image-container,
+  #work-4 .work-image-container {
+    order: 2;
+  }
+
+  #section-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    padding-bottom: 12rem;
+  }
+
+  .languages-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .language {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f7f7f9;
+    height: 9rem;
+    width: 10rem;
+    padding: 1rem;
+  }
+
+  .portfolio-footer {
+    background-image: url('images/contact-form-background-desktop.png');
+  }
+
+  .footer-form {
+    width: 50%;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 80%;
+    border-radius: 0;
+  }
+
+  .form-button {
+    align-self: center;
+  }
 }
