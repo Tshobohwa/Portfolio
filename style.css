@@ -343,7 +343,7 @@ ul {
   #section-1 {
     background-image: url('images/header-background-desktop.png');
     background-size: auto;
-    padding: 5rem 25rem;
+    padding: 5rem 22.5%;
   }
 
   .work {
@@ -386,6 +386,10 @@ ul {
   #work-2 .work-image-container,
   #work-4 .work-image-container {
     order: 2;
+  }
+
+  .tool{
+    font-size: 0.7rem;
   }
 
   #section-3 {
