@@ -322,12 +322,14 @@ ul {
     background-color: #ffff;
     align-items: center;
     padding: 0 5rem;
-    box-shadow: 0 0 1rem #a7aeff;
+    box-shadow: 0 -0.5rem 1rem #a7aeff;
   }
 
   .header-li a {
     color: #344563;
     font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
   }
 
   #hamburger-menu {
@@ -388,6 +390,11 @@ ul {
   #work-2 .work-image-container,
   #work-4 .work-image-container {
     order: 2;
+  }
+
+  .work-summary{
+    font-size: 0.8rem;
+    line-height: 1.2rem;
   }
 
   .tool{
