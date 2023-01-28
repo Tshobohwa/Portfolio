@@ -311,3 +311,133 @@ ul {
   border-radius: 0.2rem;
   align-self: flex-start;
 }
+
+@media (min-width: 1024px) {
+  body {
+    font-size: 20px;
+  }
+
+  #page-header {
+    height: 3.5rem;
+    background-color: #ffff;
+    align-items: center;
+    padding: 0 5rem;
+    box-shadow: 0 -0.5rem 1rem #a7aeff;
+  }
+
+  .header-li a {
+    color: #344563;
+    font-weight: 400;
+    font-size: 0.75rem;
+    line-height: 1rem;
+  }
+
+  #hamburger-menu {
+    display: none;
+  }
+
+  #header-ul {
+    display: flex;
+  }
+
+  .header-li {
+    margin: 0 1rem;
+  }
+
+  #section-1 {
+    background-image: url('images/header-background-desktop.png');
+    background-size: auto;
+    padding: 5rem 22.5%;
+  }
+
+  .work {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 7rem 10% 0 10%;
+  }
+
+  .work:hover {
+    border: 2px solid #a7aeff;
+    box-shadow: 0 0 16px #a7aeff;
+  }
+
+  .work-image-container {
+    width: 100%;
+    height: 370px;
+  }
+
+  .work-image-1 {
+    background-image: url("images/Snapshoot-Portfolio-1-desktop.png");
+  }
+
+  .work-image-2 {
+    background-image: url("images/Snapshoot-Portfolio-2-desktop.png");
+  }
+
+  .work-image-3 {
+    background-image: url("images/Snapshoot-Portfolio-3-desktop.png");
+  }
+
+  .work-image-4 {
+    background-image: url("images/Snapshoot-Portfolio-4-desktop.png");
+  }
+
+  #work-2 .work-description,
+  #work-4 .work-description {
+    order: 1;
+  }
+
+  #work-2 .work-image-container,
+  #work-4 .work-image-container {
+    order: 2;
+  }
+
+  .work-summary {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+  }
+
+  .tool {
+    font-size: 0.7rem;
+  }
+
+  #section-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 2rem;
+    padding-bottom: 12rem;
+  }
+
+  .languages-list {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+  }
+
+  .language {
+    flex-direction: column;
+    align-items: flex-start;
+    background: #f7f7f9;
+    height: 9rem;
+    width: 10rem;
+    padding: 1rem;
+  }
+
+  .portfolio-footer {
+    background-image: url('images/contact-form-background-desktop.png');
+  }
+
+  .footer-form {
+    width: 50%;
+  }
+
+  .form-input,
+  .form-textarea {
+    width: 80%;
+    border-radius: 0;
+  }
+
+  .form-button {
+    align-self: center;
+  }
+}

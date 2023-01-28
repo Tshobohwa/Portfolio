@@ -19,13 +19,13 @@
       <img src="icons/Hamburger-menu.png" id="hamburger-menu" />
       <ul id="header-ul">
         <li class="header-li">
-          <a href="header-link">Portfolio</a>
+          <a href="#section-1">Portfolio</a>
         </li>
         <li class="header-li">
-          <a href="header-link">About</a>
+          <a href="#section-3">About</a>
         </li>
         <li class="header-li">
-          <a href="header-link">Contact</a>
+          <a href="#portfolio-footer">Contact</a>
         </li>
       </ul>
     </nav>
@@ -94,17 +94,18 @@
       <div class="work-description">
         <h2 class="work-name title">Multi-Post Stories</h2>
         <h3 class="small-description">
-          CANOPY
+            FACEBOOK
           <span class="small-description-highlight">
-            <img src="icons/Counter.png" class="counter" /> Back End Dev
+            <img src="icons/Counter.png" class="counter" /> Full Stack Dev
             <img src="icons/Counter.png" class="counter" /> 2015</span>
         </h3>
         <p class="work-summary">
-          A daily selection of privately personalized reads; no accounts or
-          sign-ups required.
+        Experimental content creation feature that allows users to add to an existing story over the course of a day without
+        spamming their friends.
         </p>
         <ul class="work-used-tools">
           <li class="tool">html</li>
+          <li class="tool">Ruby on rails</li>
           <li class="tool">css</li>
           <li class="tool">javascript</li>
         </ul>
@@ -116,17 +117,18 @@
       <div class="work-description">
         <h2 class="work-name title">Facebook 360</h2>
         <h3 class="small-description">
-          CANOPY
+          FACEBOOK
           <span class="small-description-highlight">
-            <img src="icons/Counter.png" class="counter" /> Back End Dev
+            <img src="icons/Counter.png" class="counter" /> Full Stack Dev
             <img src="icons/Counter.png" class="counter" /> 2015</span>
         </h3>
         <p class="work-summary">
-          A daily selection of privately personalized reads; no accounts or
-          sign-ups required.
+          Exploring the future of media in Facebook's first Virtual Reality app; a place to discover and enjoy 360 photos and
+          videos on Gear VR.
         </p>
         <ul class="work-used-tools">
           <li class="tool">html</li>
+          <li class="tool">Ruby on rails</li>
           <li class="tool">css</li>
           <li class="tool">javascript</li>
         </ul>
@@ -138,17 +140,17 @@
       <div class="work-description">
         <h2 class="work-name title">Uber Navigation</h2>
         <h3 class="small-description">
-          CANOPY
+          UBER
           <span class="small-description-highlight">
-            <img src="icons/Counter.png" class="counter" /> Back End Dev
-            <img src="icons/Counter.png" class="counter" /> 2015</span>
+            <img src="icons/Counter.png" class="counter" /> Lead Developer
+            <img src="icons/Counter.png" class="counter" /> 2018</span>
         </h3>
         <p class="work-summary">
-          A daily selection of privately personalized reads; no accounts or
-          sign-ups required.
+          A smart assistant to make driving more safe, efficient, and fun by unlocking your most expensive computer: your car.
         </p>
         <ul class="work-used-tools">
           <li class="tool">html</li>
+          <li class="tool">Ruby on rails</li>
           <li class="tool">css</li>
           <li class="tool">javascript</li>
         </ul>
@@ -224,7 +226,7 @@
       </li>
     </ul>
   </section>
-  <footer class="portfolio-footer">
+  <footer class="portfolio-footer" id="portfolio-footer">
     <form class="footer-form" action="https://formspree.io/f/xvonzgnd" method="POST">
       <h2 class="form-header">Contact me</h2>
       <p class="footer-description">If you have an application you are interested in developing, a feature that you need
@@ -232,7 +234,8 @@
         coding. I’d love to help with it</p>
       <input name="Name" type="text" required maxlength="30" class="form-input" placeholder="Write your names here">
       <input name="Email" type="email" required class="form-input" placeholder="Write your email address here">
-      <textarea class="form-textarea" name="Message" required maxlength="500" placeholder="Write your message here"></textarea>
+      <textarea class="form-textarea" name="Message" required maxlength="500"
+        placeholder="Write your message here"></textarea>
       <button class="form-button" type="submit">Get touch</button>
     </form>
   </footer>
