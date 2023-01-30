@@ -356,7 +356,6 @@ ul {
     grid-template-columns: 1fr 1fr;
     margin: 7rem 10% 0 10%;
     transition: box-shadow, border 0.75s;
-
   }
 
   .work:hover {
