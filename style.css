@@ -191,6 +191,7 @@ ul {
   color: #396df2;
   padding-left: 1rem;
   padding-right: 1rem;
+  transition: background-color, color 0.75s;
 }
 
 .portfolio-btn:hover {
@@ -354,6 +355,8 @@ ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
     margin: 7rem 10% 0 10%;
+    transition: box-shadow, border 0.75s;
+
   }
 
   .work:hover {
