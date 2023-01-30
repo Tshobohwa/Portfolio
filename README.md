@@ -65,7 +65,7 @@ My portfolio
 
 > Add a link to your deployed project.
 
-- [comming soon]()
+- [Portfolio](https://tshobohwa.github.io/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
