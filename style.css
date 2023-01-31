@@ -118,29 +118,9 @@ ul {
   gap: 1.25rem;
 }
 
-.work-image-container {
+.work-image {
   border-radius: 0.5rem;
-  width: 295px;
-  height: 220px;
-  align-self: center;
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-.work-image-1 {
-  background-image: url("images/Snapshoot-Portfolio-1.jpg");
-}
-
-.work-image-2 {
-  background-image: url("images/Snapshoot-Portfolio-2.jpg");
-}
-
-.work-image-3 {
-  background-image: url("images/Snapshoot-Portfolio-3.jpg");
-}
-
-.work-image-4 {
-  background-image: url("images/Snapshoot-Portfolio-4.jpg");
+  width: 100%;
 }
 
 .work-name {
@@ -368,29 +348,13 @@ ul {
     height: 370px;
   }
 
-  .work-image-1 {
-    background-image: url("images/Snapshoot-Portfolio-1-desktop.png");
-  }
-
-  .work-image-2 {
-    background-image: url("images/Snapshoot-Portfolio-2-desktop.png");
-  }
-
-  .work-image-3 {
-    background-image: url("images/Snapshoot-Portfolio-3-desktop.png");
-  }
-
-  .work-image-4 {
-    background-image: url("images/Snapshoot-Portfolio-4-desktop.png");
-  }
-
   #work-2 .work-description,
   #work-4 .work-description {
     order: 1;
   }
 
-  #work-2 .work-image-container,
-  #work-4 .work-image-container {
+  #work-2 .work-image,
+  #work-4 .work-image {
     order: 2;
   }
 
