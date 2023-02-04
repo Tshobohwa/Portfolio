@@ -40,9 +40,10 @@ My portfolio
 # 📖 [Portfolio] <a name="about-project"></a>
 
 > Describe your project in 1 or 2 sentences.
-> Video description: [@loomhandle](https://www.loom.com/share/216a834a707246da9fdccf8ffa452918)
 
 **[Portfolio]** is my own personal site, where I present my software development projects and skills.
+
+> Video description: [@loomhandle](https://www.loom.com/share/216a834a707246da9fdccf8ffa452918)
 
 ## 🛠 Built With <a name="built-with"></a>
 
