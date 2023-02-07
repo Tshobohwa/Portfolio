@@ -53,7 +53,7 @@ ul {
   flex-direction: column;
 }
 
-.header-li{
+.header-li {
   width: 100%;
   display: flex;
   margin: 0.5rem 0;
@@ -63,22 +63,22 @@ ul {
   color: white;
 }
 
-.exit-li{
+.exit-li {
   justify-content: flex-end;
 }
 
-.header-ul-active{
+.header-ul-active {
   left: 0;
 }
 
-.nav-exit-button{
+.nav-exit-button {
   background: none;
   border: none;
   height: 2rem;
   width: 2rem;
 }
 
-.nav-exit-button img{
+.nav-exit-button img {
   height: 100%;
   width: 100%;
 }
@@ -358,7 +358,7 @@ ul {
     padding: 0 5rem;
     box-shadow: 0 -0.5rem 1rem #a7aeff;
   }
-  
+
   #hamburger-menu {
     display: none;
   }
@@ -366,7 +366,7 @@ ul {
   .nav-exit-button {
     display: none;
   }
-  
+
   #header-ul {
     display: flex;
     flex-direction: row;
@@ -385,13 +385,14 @@ ul {
   .header-li {
     margin: 0 1rem;
   }
-  
+
   .header-li a {
     color: #344563;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1rem;
   }
+
   #section-1 {
     background-image: url('images/header-background-desktop.png');
     background-size: auto;
@@ -434,7 +435,7 @@ ul {
     font-size: 0.7rem;
   }
 
-  .ruby{
+  .ruby {
     display: flex;
   }
 
