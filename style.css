@@ -10,6 +10,7 @@ body {
   background: #e5e5e5;
   font-family: "poppins", sans-serif;
   width: 100vw;
+  position: relative;
 }
 
 ul {
@@ -27,6 +28,7 @@ ul {
   display: flex;
   justify-content: space-between;
   padding: 5%;
+  background-color: white;
 }
 
 #my-logo {
@@ -34,7 +36,54 @@ ul {
   font-size: 18px;
 }
 
-#header-ul {
+.header-ul {
+  background-color: rgba(96, 112, 255, 0.7);
+  position: absolute;
+  top: 0;
+  left: -150%;
+  width: 100vw;
+  height: 100vh;
+  transition: left 0.5s;
+  backdrop-filter: blur(3px);
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 2.75rem;
+  padding: 1rem 1rem 0 2.75rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-li{
+  width: 100%;
+  display: flex;
+  margin: 0.5rem 0;
+}
+
+.header-li a {
+  color: white;
+}
+
+.exit-li{
+  justify-content: flex-end;
+}
+
+.header-ul-active{
+  left: 0;
+}
+
+.nav-exit-button{
+  background: none;
+  border: none;
+  height: 2rem;
+  width: 2rem;
+}
+
+.nav-exit-button img{
+  height: 100%;
+  width: 100%;
+}
+
+.nav-hidden {
   display: none;
 }
 
@@ -151,13 +200,17 @@ ul {
 
 .tool {
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
   padding: 0.25rem 0.75rem;
   height: 1.5rem;
   background: #ebebff;
   border-radius: 0.5rem;
   color: #6070ff;
+}
+
+.ruby {
+  display: none;
 }
 
 .portfolio-btn {
@@ -305,26 +358,40 @@ ul {
     padding: 0 5rem;
     box-shadow: 0 -0.5rem 1rem #a7aeff;
   }
+  
+  #hamburger-menu {
+    display: none;
+  }
 
+  .nav-exit-button {
+    display: none;
+  }
+  
+  #header-ul {
+    display: flex;
+    flex-direction: row;
+    background: none;
+    position: relative;
+    width: inherit;
+    height: 100%;
+    backdrop-filter: none;
+    font-size: 2rem;
+    line-height: 2.75rem;
+    padding: 0;
+    align-items: center;
+    left: 0;
+  }
+
+  .header-li {
+    margin: 0 1rem;
+  }
+  
   .header-li a {
     color: #344563;
     font-weight: 400;
     font-size: 0.75rem;
     line-height: 1rem;
   }
-
-  #hamburger-menu {
-    display: none;
-  }
-
-  #header-ul {
-    display: flex;
-  }
-
-  .header-li {
-    margin: 0 1rem;
-  }
-
   #section-1 {
     background-image: url('images/header-background-desktop.png');
     background-size: auto;
@@ -365,6 +432,10 @@ ul {
 
   .tool {
     font-size: 0.7rem;
+  }
+
+  .ruby{
+    display: flex;
   }
 
   #section-3 {
