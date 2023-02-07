@@ -346,6 +346,24 @@ ul {
   align-self: flex-start;
 }
 
+.popup{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 100vh;
+  background-color: rgba(193, 199, 208, 0.7);
+  backdrop-filter: blur(5px);
+  padding: 5%;
+}
+
+.popup-container{
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  border-radius: 1.2rem;
+}
+
 @media (min-width: 1024px) {
   body {
     font-size: 20px;

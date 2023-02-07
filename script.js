@@ -40,3 +40,11 @@ contactLink.addEventListener('click', (e) => {
   hideNav();
   contactSection.scrollIntoView({behavior: 'smooth'});
 });
+
+const workSection = document.getElementById('section-2');
+console.log(workSection);
+
+const works = document.querySelectorAll('.work');
+console.log(works);
+
+// workSection.innerHTML = "";
