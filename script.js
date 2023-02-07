@@ -12,11 +12,11 @@ const portfolioSection = document.getElementById('section-2');
 const aboutSection = document.getElementById('section-3');
 const contactSection = document.getElementById('portfolio-footer');
 
-const displayNav = function() {
+const displayNav = () => {
   headerUl.classList.add('header-ul-active');
 };
 
-const hideNav = function() {
+const hideNav = () => {
   headerUl.classList.remove('header-ul-active');
 };
 
