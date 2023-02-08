@@ -577,4 +577,23 @@ ul {
   .form-button {
     align-self: center;
   }
+
+  .popup-footer {
+    display: grid;
+    grid-template-columns: auto 400px;
+    padding-bottom: 4rem;
+  }
+  
+  .work-description-desktop {
+    display: block;
+    padding-right: 1.2rem;
+  }
+  
+  .work-descripton-mobile {
+    display: none;
+  }
+  
+  .popup-work-tools__desktop {
+    display: flex;
+  }
 }

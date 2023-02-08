@@ -136,7 +136,17 @@ const workObjectArray = [];
 
 popup.classList.add('popup-hidden');
 
+works.forEach((wrk, i) => {
+  const id  = `work-${i + 1}`;
+  const imgSrc = wrk.querySelector('.work-image').src;
+  const name = wrk.querySelector('.work-name').textContent;
+  const smallDescription = wrk.querySelector('.small-description').innerHTML;
+  const summary = wrk.querySelector('.work-summary').textContent;
+  const usedTools =  wrk.querySelector('.work-used-tools').innerHTML;
+  const seeProjectBtn = wrk.querySelector('.portfolio-btn');
+  workObjectArray.push(new Work(id, imgSrc, name, smallDescription, summary, usedTools, seeProjectBtn));
+  });
 
-
-
-
+  workObjectArray.forEach(work => {
+  work.showWorkCard();
+})
