@@ -42,8 +42,9 @@ contactLink.addEventListener('click', (e) => {
 });
 
 const workSection = document.getElementById('section-2');
-const works = document.querySelectorAll('.work');
-workSection.innerHTML = '';
+const popup = document.querySelector('.popup');
+popup.classList.add('popup-hidden');
+
 
 /**
  * This class can return works objects
@@ -70,7 +71,7 @@ class Work {
   /**
    * This function shows the popup on the page
    * */
-  displayPopup() {
+  #displayPopup() {
     popup.innerHTML = `    
     <div class="popup-container">
       <div class="popup-header">
@@ -82,14 +83,17 @@ class Work {
           </button>
         </div>
         <h4 class="small-description">
-          ${this.smallDescription}
+          ${this.#CreateSmallDescriptionHTML()}
         </h4>
       </div>
       <div class="popup-image__container">
         <img src="${this.imgSrc}" alt="work image" class="popup-image">
       </div>
       <div class="popup-footer">
-        <p class="work-descripton-mobile">${this.summary}</p>
+        <p class="work-descripton-mobile">${this.summary}
+          releorem Ipsum is simply dummy text of the printing and
+           typesetting industry. Lorem Ipsum han printer took a galley of
+          type and scrambled it 1960s with the releawn printer took </p>
         <p class="work-description-desktop">${this.summary}
          typesetting industry. Lorem Ipsum
          has been the industry's
@@ -106,7 +110,7 @@ class Work {
            type and scrambled it 1960s with the relea
         </p>
         <div class="popup-tools-and-btn">
-          <div class="popup-work__tools">${this.usedTools}
+          <div class="popup-work__tools">${this.#createUsedToolsHTML()}
           </div>
           <div class="popup-work__tools popup-work-tools__desktop">
             <div class="tool">Github</div>
@@ -135,6 +139,23 @@ class Work {
     });
   }
 
+  #createUsedToolsHTML(){
+    let toolsHTML = ''
+    this.usedTools.forEach(tool => {
+      toolsHTML += `<li class="tool">${tool}</li>`
+    });
+    return toolsHTML
+  }
+
+  #CreateSmallDescriptionHTML(){
+    return `
+      ${this.smallDescription[0]}
+          <span class="small-description-highlight">
+            <img src="icons/Counter.png" class="counter" alt="counter"/> ${this.smallDescription[1]}
+            <img src="icons/Counter.png" class="counter" alt="counter"/> ${this.smallDescription[2]}</span>
+        `
+  }
+
   /**
  * this function shows programaticaly the work cards on the page
  */
@@ -146,11 +167,11 @@ class Work {
       <div class="work-description">
         <h3 class="work-name title">${this.name}</h3>
         <h4 class="small-description">
-        ${this.smallDescription}
+        ${this.#CreateSmallDescriptionHTML()}
         </h4>
         <p class="work-summary">${this.summary}
         </p>
-        <ul class="work-used-tools">${this.usedTools}
+        <ul class="work-used-tools">${this.#createUsedToolsHTML()}
         </ul>
           <button class="portfolio-btn" id="see-project-btn-${this.id}">
             See Project</button>
@@ -158,27 +179,55 @@ class Work {
     </div>
     `);
     workSection.querySelector(`#see-project-btn-${this.id}`)
-        .addEventListener('click', this.displayPopup.bind(this));
+        .addEventListener('click', this.#displayPopup.bind(this));
   }
 }
 
-const popup = document.querySelector('.popup');
-const workObjectArray = [];
+// Creation of an array of work object instances of the Work class
 
-popup.classList.add('popup-hidden');
+const works = [ 
+  new Work (
+    'work-1',
+    'images/Snapshoot-Portfolio-1-desktop.png',
+    'Multi-Post Stories',
+    ['FACEBOOK', 'Full Stack Dev', 'JavaScript'],
+    `
+      A daily selection of privately personalized reads; no accounts or
+      sign-ups required.`,
+      ['html', 'css', 'javascript']
 
-works.forEach((wrk, i) => {
-  const id = `work-${i + 1}`;
-  const imgSrc = wrk.querySelector('.work-image').src;
-  const name = wrk.querySelector('.work-name').textContent;
-  const smallDescription = wrk.querySelector('.small-description').innerHTML;
-  const summary = wrk.querySelector('.work-summary').textContent;
-  const usedTools = wrk.querySelector('.work-used-tools').innerHTML;
-  workObjectArray
-      .push(new Work(id, imgSrc, name,
-          smallDescription, summary, usedTools));
-});
+  ),
+  new Work (
+   'work-2',
+   'images/Snapshoot-Portfolio-2-desktop.png',
+   'Facebook 360',
+   ['FACEBOOK', 'Full Stack Dev', 'JavaScript'],
+   `
+    Experimental content creation feature that allows users to add to an existing 
+    story over the course of a day without spamming their friends.`,
+  ['html', 'css', 'Ruby on rails', 'javascript']
+  ),
+  new Work (
+    'work-3',
+    'images/Snapshoot-Portfolio-3-desktop.png',
+    'Tonic',
+    ['FACEBOOK', 'Full Stack Dev', '2016'],
+    `
+      Exploring the future of media in Facebook's first Virtual Reality app;
+       a place to discover and enjoy 360 photos and videos on Gear VR.`,
+    ['html', 'css', 'Ruby on rails', 'javascript']
+    ),
+  new Work (
+    'work-4',
+    'images/Snapshoot-Portfolio-4-desktop.png',
+    'Uber Navigation',
+    ['Uber', 'Lead Developer', '2018'],
+    `
+      A smart assistant to make driving more safe, efficient, and fun by unlocking
+       your most expensive computer: your car.`,
+    ['html', 'css', 'Ruby on rails', 'javascript']
+  )
+]
 
-workObjectArray.forEach((work) => {
-  work.showWorkCard();
-});
+// showing on the page each work card
+works.forEach(work => work.showWorkCard());
