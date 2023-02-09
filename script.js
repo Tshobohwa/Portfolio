@@ -45,25 +45,40 @@ const workSection = document.getElementById('section-2');
 const works = document.querySelectorAll('.work');
 workSection.innerHTML = '';
 
+/**
+ * This class can return works objects
+ */
 class Work {
-  constructor(id, imgSrc, name, smallDescription, summary, usedTools, seeProjectBtn){
+  /**
+   * @param {string} id
+   * @param {string} imgSrc
+   * @param {string} name
+   * @param {string} smallDescription
+   * @param {string} summary
+   * @param {string} usedTools
+   *  */
+  constructor(id, imgSrc, name, smallDescription,
+      summary, usedTools) {
     this.id = id;
     this.imgSrc = imgSrc;
     this.name = name;
     this.smallDescription = smallDescription;
     this.summary = summary;
     this.usedTools = usedTools;
-    this.seeProjectBtn = seeProjectBtn;
   }
 
-  displayPopup(){
+  /**
+   * This function shows the popup on the page
+   * */
+  displayPopup() {
     popup.innerHTML = `    
     <div class="popup-container">
       <div class="popup-header">
         <div class="popup-top">
           <h2 class="work-name title">${this.name}</h2>
           <button class="close-popup__btn">
-            <img src="icons/reject-popup.png" alt="exit" class="close-popup__icon">
+            <img src="icons/reject-popup.png" alt="exit" 
+            class="close-popup__icon">
           </button>
         </div>
         <h4 class="small-description">
@@ -75,12 +90,20 @@ class Work {
       </div>
       <div class="popup-footer">
         <p class="work-descripton-mobile">${this.summary}</p>
-        <p class="work-description-desktop">${this.summary} typesetting industry. Lorem Ipsum has been the industry's
-          standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the
-          releorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum han printer took a galley of
-          type and scrambled it 1960s with the releawn printer took a galley of type and scrambled it 1960s with the releaLorem
-          Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy
-          text ever since the 1500s, when an unknown printer took a galley of type and scrambled it 1960s with the relea
+        <p class="work-description-desktop">${this.summary}
+         typesetting industry. Lorem Ipsum
+         has been the industry's
+          standard dummy text ever 
+          since the 1500s, when an unknown printer took a
+           galley of type and scrambled it 1960s with the
+          releorem Ipsum is simply dummy text of the printing and
+           typesetting industry. Lorem Ipsum han printer took a galley of
+          type and scrambled it 1960s with the releawn printer took 
+          a galley of type and scrambled it 1960s with the releaLorem
+          Ipsum is simply dummy text of the printing and typesetting
+           industry. Lorem Ipsum has been the industry's standard dummy
+          text ever since the 1500s, when an unknown printer took a galley of
+           type and scrambled it 1960s with the relea
         </p>
         <div class="popup-tools-and-btn">
           <div class="popup-work__tools">${this.usedTools}
@@ -91,9 +114,11 @@ class Work {
             <div class="tool">Bootstrap</div>
           </div>
           <div class="popup-btn__container">
-            <button class="popup-btn portfolio-btn">See live <img src="icons/popup-see-project.png" alt="icon"
+            <button class="popup-btn portfolio-btn">
+              See live <img src="icons/popup-see-project.png" alt="icon"
                 class="popup-btn__icon"></button>
-            <button class="popup-btn portfolio-btn">See Source <img src="icons/popup-github.png" alt="icon"
+            <button class="popup-btn portfolio-btn">
+              See Source <img src="icons/popup-github.png" alt="icon"
                 class="popup-btn__icon"></button>
           </div>
         </div>
@@ -104,13 +129,17 @@ class Work {
       popup.classList.add('popup-hidden');
     });
     popup.addEventListener('click', (e) =>{
-      if (e.target.classList.contains('popup')){
+      if (e.target.classList.contains('popup')) {
         popup.classList.add('popup-hidden');
       }
-    })
+    });
   }
 
-  showWorkCard(){
+  /**
+ * this function shows programaticaly the work cards on the page
+ */
+
+  showWorkCard() {
     workSection.insertAdjacentHTML('beforeend', `
     <div class="work" id="${this.id}">
       <img src="${this.imgSrc}" class="work-image" alt="work image">
@@ -123,11 +152,13 @@ class Work {
         </p>
         <ul class="work-used-tools">${this.usedTools}
         </ul>
-          <button class="portfolio-btn" id="see-project-btn-${this.id}">See Project</button>
+          <button class="portfolio-btn" id="see-project-btn-${this.id}">
+            See Project</button>
       </div>
     </div>
     `);
-    workSection.querySelector(`#see-project-btn-${this.id}`).addEventListener('click', this.displayPopup.bind(this))
+    workSection.querySelector(`#see-project-btn-${this.id}`)
+        .addEventListener('click', this.displayPopup.bind(this));
   }
 }
 
@@ -137,16 +168,17 @@ const workObjectArray = [];
 popup.classList.add('popup-hidden');
 
 works.forEach((wrk, i) => {
-  const id  = `work-${i + 1}`;
+  const id = `work-${i + 1}`;
   const imgSrc = wrk.querySelector('.work-image').src;
   const name = wrk.querySelector('.work-name').textContent;
   const smallDescription = wrk.querySelector('.small-description').innerHTML;
   const summary = wrk.querySelector('.work-summary').textContent;
-  const usedTools =  wrk.querySelector('.work-used-tools').innerHTML;
-  const seeProjectBtn = wrk.querySelector('.portfolio-btn');
-  workObjectArray.push(new Work(id, imgSrc, name, smallDescription, summary, usedTools, seeProjectBtn));
-  });
+  const usedTools = wrk.querySelector('.work-used-tools').innerHTML;
+  workObjectArray
+      .push(new Work(id, imgSrc, name,
+          smallDescription, summary, usedTools));
+});
 
-  workObjectArray.forEach(work => {
+workObjectArray.forEach((work) => {
   work.showWorkCard();
-})
+});
