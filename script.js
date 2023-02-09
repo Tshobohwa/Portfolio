@@ -42,5 +42,9 @@ contactLink.addEventListener('click', (e) => {
 });
 
 const workSection = document.getElementById('section-2');
+console.log(workSection);
+
 const works = document.querySelectorAll('.work');
-workSection.innerHTML = '';
+console.log(works);
+
+// workSection.innerHTML = "";
