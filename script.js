@@ -138,28 +138,35 @@ class Work {
       }
     });
   }
-
-  #createUsedToolsHTML(){
-    let toolsHTML = ''
-    this.usedTools.forEach(tool => {
-      toolsHTML += `<li class="tool">${tool}</li>`
+  /**
+ *
+ * @return {string} toolsHTML
+ */
+  #createUsedToolsHTML() {
+    let toolsHTML = '';
+    this.usedTools.forEach((tool) => {
+      toolsHTML += `<li class="tool">${tool}</li>`;
     });
-    return toolsHTML
+    return toolsHTML;
   }
 
-  #CreateSmallDescriptionHTML(){
+  /**
+   * @return {string}
+   */
+  #CreateSmallDescriptionHTML() {
     return `
       ${this.smallDescription[0]}
           <span class="small-description-highlight">
-            <img src="icons/Counter.png" class="counter" alt="counter"/> ${this.smallDescription[1]}
-            <img src="icons/Counter.png" class="counter" alt="counter"/> ${this.smallDescription[2]}</span>
-        `
+            <img src="icons/Counter.png" class="counter"
+             alt="counter"/> ${this.smallDescription[1]}
+            <img src="icons/Counter.png" class="counter" alt="counter"/>
+             ${this.smallDescription[2]}</span>
+        `;
   }
 
   /**
  * this function shows programaticaly the work cards on the page
  */
-
   showWorkCard() {
     workSection.insertAdjacentHTML('beforeend', `
     <div class="work" id="${this.id}">
@@ -185,49 +192,51 @@ class Work {
 
 // Creation of an array of work object instances of the Work class
 
-const works = [ 
-  new Work (
-    'work-1',
-    'images/Snapshoot-Portfolio-1-desktop.png',
-    'Multi-Post Stories',
-    ['FACEBOOK', 'Full Stack Dev', 'JavaScript'],
-    `
+const works = [
+  new Work(
+      'work-1',
+      'images/Snapshoot-Portfolio-1-desktop.png',
+      'Multi-Post Stories',
+      ['FACEBOOK', 'Full Stack Dev', 'JavaScript'],
+      `
       A daily selection of privately personalized reads; no accounts or
       sign-ups required.`,
-      ['html', 'css', 'javascript']
+      ['html', 'css', 'javascript'],
 
   ),
-  new Work (
-   'work-2',
-   'images/Snapshoot-Portfolio-2-desktop.png',
-   'Facebook 360',
-   ['FACEBOOK', 'Full Stack Dev', 'JavaScript'],
-   `
-    Experimental content creation feature that allows users to add to an existing 
+  new Work(
+      'work-2',
+      'images/Snapshoot-Portfolio-2-desktop.png',
+      'Facebook 360',
+      ['FACEBOOK', 'Full Stack Dev', 'JavaScript'],
+      `
+    Experimental content creation feature that allows users to add
+     to an existing 
     story over the course of a day without spamming their friends.`,
-  ['html', 'css', 'Ruby on rails', 'javascript']
+      ['html', 'css', 'Ruby on rails', 'javascript'],
   ),
-  new Work (
-    'work-3',
-    'images/Snapshoot-Portfolio-3-desktop.png',
-    'Tonic',
-    ['FACEBOOK', 'Full Stack Dev', '2016'],
-    `
+  new Work(
+      'work-3',
+      'images/Snapshoot-Portfolio-3-desktop.png',
+      'Tonic',
+      ['FACEBOOK', 'Full Stack Dev', '2016'],
+      `
       Exploring the future of media in Facebook's first Virtual Reality app;
        a place to discover and enjoy 360 photos and videos on Gear VR.`,
-    ['html', 'css', 'Ruby on rails', 'javascript']
-    ),
-  new Work (
-    'work-4',
-    'images/Snapshoot-Portfolio-4-desktop.png',
-    'Uber Navigation',
-    ['Uber', 'Lead Developer', '2018'],
-    `
-      A smart assistant to make driving more safe, efficient, and fun by unlocking
+      ['html', 'css', 'Ruby on rails', 'javascript'],
+  ),
+  new Work(
+      'work-4',
+      'images/Snapshoot-Portfolio-4-desktop.png',
+      'Uber Navigation',
+      ['Uber', 'Lead Developer', '2018'],
+      `
+      A smart assistant to make driving more safe, efficient,
+       and fun by unlocking
        your most expensive computer: your car.`,
-    ['html', 'css', 'Ruby on rails', 'javascript']
-  )
-]
+      ['html', 'css', 'Ruby on rails', 'javascript'],
+  ),
+];
 
 // showing on the page each work card
-works.forEach(work => work.showWorkCard());
+works.forEach((work) => work.showWorkCard());
