@@ -404,6 +404,9 @@ ul {
 
 .work-descripton-mobile {
   display: block;
+  padding-right: 1.2rem;
+  color: #344563;
+  line-height: 1.5rem;
 }
 
 .popup-image {
@@ -578,6 +581,11 @@ ul {
     align-self: center;
   }
 
+  .popup-container{
+    width: 80%;
+    margin: auto;
+  }
+
   .popup-footer {
     display: grid;
     grid-template-columns: auto 400px;
@@ -585,8 +593,11 @@ ul {
   }
 
   .work-description-desktop {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
     display: block;
     padding-right: 1.2rem;
+    color: #344563;
   }
 
   .work-descripton-mobile {
