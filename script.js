@@ -240,3 +240,17 @@ const works = [
 
 // showing on the page each work card
 works.forEach((work) => work.showWorkCard());
+
+
+// Form validation
+const contactForm = document.querySelector('.footer-form');
+const emailInput = document.querySelector('.email-input');
+const validationMsg = document.querySelector('.validation-message');
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  let emailAddress = emailInput.value;
+  if (emailAddress !== emailAddress.toLowerCase()) {
+      validationMsg.textContent = 'The email must not include capital letters!';
+  }
+});
