@@ -71,7 +71,7 @@ class Work {
   /**
    * This function shows the popup on the page
    * */
-  #displayPopup() {
+  displayPopup() {
     popup.innerHTML = `    
     <div class="popup-container">
       <div class="popup-header">
@@ -83,7 +83,7 @@ class Work {
           </button>
         </div>
         <h4 class="small-description">
-          ${this.#CreateSmallDescriptionHTML()}
+          ${this.CreateSmallDescriptionHTML()}
         </h4>
       </div>
       <div class="popup-image__container">
@@ -110,7 +110,7 @@ class Work {
            type and scrambled it 1960s with the relea
         </p>
         <div class="popup-tools-and-btn">
-          <div class="popup-work__tools">${this.#createUsedToolsHTML()}
+          <div class="popup-work__tools">${this.createUsedToolsHTML()}
           </div>
           <div class="popup-work__tools popup-work-tools__desktop">
             <div class="tool">Github</div>
@@ -142,7 +142,7 @@ class Work {
  *
  * @return {string} toolsHTML
  */
-  #createUsedToolsHTML() {
+  createUsedToolsHTML() {
     let toolsHTML = '';
     this.usedTools.forEach((tool) => {
       toolsHTML += `<li class="tool">${tool}</li>`;
@@ -153,7 +153,7 @@ class Work {
   /**
    * @return {string}
    */
-  #CreateSmallDescriptionHTML() {
+  CreateSmallDescriptionHTML() {
     return `
       ${this.smallDescription[0]}
           <span class="small-description-highlight">
@@ -174,11 +174,11 @@ class Work {
       <div class="work-description">
         <h3 class="work-name title">${this.name}</h3>
         <h4 class="small-description">
-        ${this.#CreateSmallDescriptionHTML()}
+        ${this.CreateSmallDescriptionHTML()}
         </h4>
         <p class="work-summary">${this.summary}
         </p>
-        <ul class="work-used-tools">${this.#createUsedToolsHTML()}
+        <ul class="work-used-tools">${this.createUsedToolsHTML()}
         </ul>
           <button class="portfolio-btn" id="see-project-btn-${this.id}">
             See Project</button>
@@ -186,7 +186,7 @@ class Work {
     </div>
     `);
     workSection.querySelector(`#see-project-btn-${this.id}`)
-        .addEventListener('click', this.#displayPopup.bind(this));
+        .addEventListener('click', this.displayPopup.bind(this));
   }
 }
 
