@@ -337,6 +337,12 @@ ul {
   font-family: 'Poppins', sans-serif;
 }
 
+.validation-message {
+  font-weight: 200;
+  color: white;
+  font-size: 0.8rem;
+}
+
 .form-button {
   background-color: white;
   color: #6070ff;
@@ -607,4 +613,9 @@ ul {
   .popup-work-tools__desktop {
     display: flex;
   }
+<<<<<<< HEAD
 }
+=======
+  
+}
+>>>>>>> add-script

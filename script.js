@@ -190,7 +190,7 @@ class Work {
   }
 }
 
-// Creation of an array of work object instances of the Work class
+// Creation of an array of work object insta
 
 const works = [
   new Work(
@@ -240,3 +240,21 @@ const works = [
 
 // showing on the page each work card
 works.forEach((work) => work.showWorkCard());
+
+
+// Form validation
+const contactForm = document.querySelector('.footer-form');
+const emailInput = document.querySelector('.email-input');
+const nameInput = document.querySelector('.name-input');
+const validationMsg = document.querySelector('.validation-message');
+
+contactForm.addEventListener('submit', (e) => {
+  e.preventDefault();
+  const emailAddress = emailInput.value;
+  if (emailAddress !== emailAddress.toLowerCase()) {
+    validationMsg.textContent = 'The email must not include capital letters!';
+  } else {
+    validationMsg.textContent ='';
+    contactForm.submit();
+  }
+});
