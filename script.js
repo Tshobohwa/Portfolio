@@ -190,7 +190,7 @@ class Work {
   }
 }
 
-// Creation of an array of work object instances of the Work class
+// Creation of an array of work object insta
 
 const works = [
   new Work(
