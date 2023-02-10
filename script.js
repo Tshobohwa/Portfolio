@@ -245,6 +245,7 @@ works.forEach((work) => work.showWorkCard());
 // Form validation
 const contactForm = document.querySelector('.footer-form');
 const emailInput = document.querySelector('.email-input');
+const nameInput = document.querySelector('.name-input');
 const validationMsg = document.querySelector('.validation-message');
 
 contactForm.addEventListener('submit', (e) => {
@@ -256,4 +257,19 @@ contactForm.addEventListener('submit', (e) => {
     validationMsg.textContent ='';
     contactForm.submit();
   }
+});
+
+// Local storage
+if (localStorage.getItem('formData')) {
+  const formData = JSON.parse(localStorage.getItem('formData'));
+  emailInput.value = formData.emailAddress;
+  nameInput.value = formData.fullName;
+}
+
+contactForm.addEventListener('input', () => {
+  const formData = {
+    fullName: nameInput.value,
+    emailAddress: emailInput.value,
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));
 });
