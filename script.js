@@ -253,4 +253,8 @@ contactForm.addEventListener('submit', (e) => {
   if (emailAddress !== emailAddress.toLowerCase()) {
       validationMsg.textContent = 'The email must not include capital letters!';
   }
+  else {
+    validationMsg.textContent ='';
+    contactForm.submit();
+    }
 });
