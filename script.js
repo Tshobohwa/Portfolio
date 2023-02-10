@@ -246,6 +246,7 @@ works.forEach((work) => work.showWorkCard());
 const contactForm = document.querySelector('.footer-form');
 const emailInput = document.querySelector('.email-input');
 const nameInput = document.querySelector('.name-input');
+const textInput = document.querySelector('.form-textarea');
 const validationMsg = document.querySelector('.validation-message');
 
 contactForm.addEventListener('submit', (e) => {
@@ -262,22 +263,16 @@ contactForm.addEventListener('submit', (e) => {
 // Local storage
 if (localStorage.getItem('formData')) {
   const formData = JSON.parse(localStorage.getItem('formData'));
-  emailInput.value = formData.emailAddress;
-  nameInput.value = formData.fullName;
+  emailInput.value = formData.emailAddress ? formData.emailAddress: '';
+  nameInput.value = formData.fullName ? formData.fullName: '';
+  textInput.value = formData.textMsg ? formData.textMsg : '';
 }
 
 contactForm.addEventListener('input', () => {
   const formData = {
     fullName: nameInput.value,
     emailAddress: emailInput.value,
-  };
-  localStorage.setItem('formData', JSON.stringify(formData));
-});
-
-contactForm.addEventListener('input', () => {
-  const formData = {
-    fullName: nameInput.value,
-    emailAddress: emailInput.value,
+    textMsg: textInput.value
   };
   localStorage.setItem('formData', JSON.stringify(formData));
 });
