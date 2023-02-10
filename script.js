@@ -249,12 +249,11 @@ const validationMsg = document.querySelector('.validation-message');
 
 contactForm.addEventListener('submit', (e) => {
   e.preventDefault();
-  let emailAddress = emailInput.value;
+  const emailAddress = emailInput.value;
   if (emailAddress !== emailAddress.toLowerCase()) {
-      validationMsg.textContent = 'The email must not include capital letters!';
-  }
-  else {
+    validationMsg.textContent = 'The email must not include capital letters!';
+  } else {
     validationMsg.textContent ='';
     contactForm.submit();
-    }
+  }
 });
