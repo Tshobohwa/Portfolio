@@ -273,3 +273,11 @@ contactForm.addEventListener('input', () => {
   };
   localStorage.setItem('formData', JSON.stringify(formData));
 });
+
+contactForm.addEventListener('input', () => {
+  const formData = {
+    fullName: nameInput.value,
+    emailAddress: emailInput.value,
+  };
+  localStorage.setItem('formData', JSON.stringify(formData));
+});
